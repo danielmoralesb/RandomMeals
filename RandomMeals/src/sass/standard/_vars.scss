@@ -18,22 +18,18 @@ $padding: 1.25rem;
 // iphone  || small devices || desktops || wide screens || large screens || super wide //
 // xs: 320 || sm: 480       || md: 768  || lg: 1024     || xl: 1274      || xxl: 1548  //
 // ----------------------------------------------------------------------------------- //
-$container-max-widths: (
-  xs: 90%,
+$container-max-widths: (xs: 90%,
   sm: 400px,
   md: 688px,
   lg: 944px,
   xl: 1194px,
-  xxl: 1468px
-);
-$grid-breakpoints: (
-  xs: 0,
+  xxl: 1468px);
+$grid-breakpoints: (xs: 0,
   sm: 480px,
   md: 768px,
   lg: 1024px,
   xl: 1274px,
-  xxl: 1548px
-);
+  xxl: 1548px);
 // ------------------------------------------------------ //
 // Columns
 //
@@ -72,11 +68,12 @@ $yt-red: #b00;
 $ad-brdr: #41ade6;
 $kashmir-blue: #46678c;
 $hoki: #627e9d;
+$morroco-brown: #451400;
 
 // ------------------------------------------------------ //
 // Brand Definitions
 //
-$brand-primary: $deep-sapphire;
+$brand-primary: $morroco-brown;
 $brand-primary-alt: $deep-sapphire-light;
 $brand-secondary: $curious-blue;
 $brand-secondary-alt: $curious-blue-dark;
@@ -85,7 +82,7 @@ $brand-secondary-alt: $curious-blue-dark;
 //
 $text-color-light: $white;
 $text-color-medium: $gray;
-$text-color-dark: $deep-sapphire;
+$text-color-dark: $morroco-brown;
 // ------------------------------------------------------ //
 // Link Colors
 //
@@ -100,7 +97,8 @@ $info: $someblue;
 // ------------------------------------------------------ //
 // Typography
 // ------
-$font-title: "futura-pt", sans-serif;
+$font-title: "futura-pt",
+sans-serif;
 $line-height: 1.15em;
 
 $font-weight-thin: 300;
@@ -122,9 +120,9 @@ $font-size-base: 1rem;
 $font-size-xs: $font-size-base - 0.4;
 $font-size-sm: $font-size-base - 0.25;
 $font-size-md: $font-size-base;
-$font-size-lg: $font-size-base + 0.5;
-$font-size-xl: $font-size-base + 1;
-$font-size-xxl: $font-size-base + 2;
+$font-size-lg: $font-size-base+0.5;
+$font-size-xl: $font-size-base+1;
+$font-size-xxl: $font-size-base+2;
 
 $font-size-title: $font-size-xl;
 $font-size-sub-title: $font-size-lg;

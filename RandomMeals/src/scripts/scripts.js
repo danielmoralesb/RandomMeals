@@ -3,16 +3,16 @@ $(function() {
 })
 
 const loadMeals = function() {
-  let parent = document.querySelector('.meals-wrapper');
+  let parent = document.querySelector('.meals');
 
   if(!parent) {
     return;
   }
 
-  let meals;
+  let mealsRandom;
 
   function selectDom(){
-    meals = parent.querySelector('.meals');
+    mealsRandom = parent.querySelector('.meals__random');
   }
 
   function getMeals() {
@@ -20,8 +20,6 @@ const loadMeals = function() {
       url: 'https://www.themealdb.com/api/json/v1/1/random.php',
       success: function(data) {
         renderMeals(data.meals);
-       // $('.meals').html(data.idMeal);
-
        console.log(data.meals);
       }
     }
@@ -31,10 +29,10 @@ const loadMeals = function() {
   function renderMeals(data) {
     $.each(data, function(i, data) {
       //console.log(i);
-      $('.meals').append(`
-        <li>
-          <span>${data.strMeal}</span>
-        </li>
+      $('.meals__random').append(`
+        <div class="meals__hero" style="background-image:url(${data.strMealThumb})">
+          <h3 class="meals__hero-title">${data.strMeal}</h3>
+        </div>
       `)
     })
   }

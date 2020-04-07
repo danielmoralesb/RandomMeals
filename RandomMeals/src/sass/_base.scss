@@ -72,6 +72,7 @@ blockquote {
   padding: $padding $padding $padding $padding * 2;
   margin: $padding 0;
   z-index: 1;
+
   &:before {
     content: '"';
     font-size: 8rem;
@@ -82,6 +83,7 @@ blockquote {
     color: $gray;
     opacity: 0.25;
   }
+
   &:after {
     content: "";
     width: 1rem;
@@ -104,21 +106,25 @@ blockquote {
 // variables
 .hidden {
   display: none !important;
+
   &--xs {
     @include max-screen("xs") {
       display: none !important;
     }
   }
+
   &--sm {
     @include max-screen("sm") {
       display: none !important;
     }
   }
+
   &--md {
     @include max-screen("md") {
       display: none !important;
     }
   }
+
   &--lg {
     @include max-screen("lg") {
       display: none !important;
