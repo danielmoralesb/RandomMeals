@@ -1,8 +1,22 @@
-.page-title {}
+.page-title {
+  font-weight: $font-weight-bold;
+  margin: $padding*2 0 $padding*3;
+  text-align: center;
+}
 
-.page-subtitle {}
+.page-subtitle {
+  margin: $padding 0 $padding*2;
+}
 
-.meals__random {}
+.page-heading3 {
+  margin: $padding 0;
+}
+
+.meals__hero-wrapper {
+  border-bottom: 1px solid $brand-primary;
+  margin-bottom: $padding*2;
+  padding-bottom: $padding*2;
+}
 
 .meals__hero {
   background-position: center center;
@@ -18,5 +32,121 @@
   font-size: $font-size-xxl;
   font-weight: $font-weight-bold;
   margin-top: auto;
-  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.75);
+}
+
+.meals__cats-wrapper {
+  border-bottom: 1px solid $brand-primary;
+  margin-bottom: $padding*2;
+  padding-bottom: $padding*2;
+}
+
+.meals__cats {
+  display: flex;
+  flex-wrap: wrap;
+  margin: $padding*2 -15px 0;
+}
+
+.meals__cat {
+  display: flex;
+  flex: 0 1 calc(50% - 30px);
+  justify-content: center;
+  height: 16vh;
+  margin: 15px;
+  position: relative;
+
+  &:hover {
+    transform: scale(1.25);
+    z-index: 1000;
+  }
+
+  @include min-screen('lg') {
+    flex-basis: calc(33.33% - 30px);
+  }
+}
+
+.meals__cat-inner {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 $padding;
+  width: 100%;
+}
+
+.meal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.meals__cat-title {
+  color: $text-color-light;
+  font-size: $font-size-md;
+  font-weight: $font-weight-bold;
+  margin: 0;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.75);
+
+  @include min-screen('lg') {
+    font-size: $font-size-lg;
+  }
+}
+
+.meals__cat-link {
+  cursor: pointer;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.meal-back-link {
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.meals__detail {
+  @include min-screen('md') {
+    display: grid;
+    grid-template-columns: 2fr, 2fr;
+  }
+}
+
+.meals-detail__photo {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 50%;
+  width: 100%;
+}
+
+.meals-details__subtitle {
+  font-weight: $font-weight-bold;
+
+  .meals-details__data.-inline & {
+    margin-bottom: 0;
+  }
+}
+
+.meals-details__data {
+  margin-bottom: $padding;
+
+  &.-inline {
+    display: flex;
+
+    >* {
+      &:not(:last-child) {
+        margin-right: $padding/3;
+      }
+    }
+  }
+}
+
+.meals-details__list-items {
+  margin-bottom: $padding*2;
 }
