@@ -3,11 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { Hero } from "./Components/Hero";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Hero/>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
