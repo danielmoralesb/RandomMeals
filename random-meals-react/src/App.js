@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Hero } from "./Components/Hero";
+import { Hero, Hero2 } from "./Components/Hero";
 
 function App() {
   return (
     <div>
       <Hero/>
+      <Hero2/>
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />

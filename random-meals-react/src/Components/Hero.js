@@ -41,10 +41,10 @@ export const Hero = () => {
     const [inventory, setInventory] = useState([]);
     useEffect(() => {
         const apiFunc = async() => {
-            const resp = await fetch("https://sampleapis.com/futurama/api/inventory");
+            const resp = await fetch("https://www.themealdb.com/api/json/v1/1/random.php");
             const data = await resp.json();
-            setInventory(data);
-            console.log(data);
+            setInventory(data.meals[0].strMealThumb);
+            console.log(data.meals[0].strMealThumb);
         };
         apiFunc()
     }, []);
@@ -54,15 +54,49 @@ export const Hero = () => {
         //   <h3 class="meals__hero-title">${data[0].strMeal}</h3>
         // </div>
         <>
-            <h1>Hero</h1>
-            <ul>
-            {inventory.map(i => (<InventoryItem item={i}/>))}
-            </ul>
+            {
+                <div className="meals__hero" style={{backgroundImage:"url("+inventory+")"}}>
+
+                </div>
+
+                // inventory.map((dataItem) => (
+                //     dataItem
+                // ))
+            }
         </>
     );
 }
 
 const InventoryItem = (prop) => {
+    return (
+        //<li>{prop.item.title}</li>
+            <h3 class="meals__hero-title">${prop.item.data[0].strMeal}</h3>
+        )
+}
+
+export const Hero2 = () => {
+    const [inventory2, setInventory2] = useState([]);
+    useEffect(() => {
+        const apiFunc2 = async() => {
+            const resp = await fetch('https://sampleapis.com/futurama/api/inventory');
+            const data = await resp.json();
+            setInventory2(data);
+            console.log(data);
+        }
+        apiFunc2();
+    }, []);
+
+    return (
+        <>
+            <h2>Hero 2</h2>
+            <ul>
+                {inventory2.map(i => (<InventoryItem2 item={i}/>))}
+            </ul>
+        </>
+    )
+}
+
+const InventoryItem2 = (prop) => {
     return (
         <li>{prop.item.title}</li>
     )
