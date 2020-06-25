@@ -1,31 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Hero, Hero2 } from "./Components/Hero";
+// import { Hero } from "./Components/Hero";
+import { Categories } from "./Components/Categories";
+import { Category } from "./Components/Category";
 
 function App() {
   return (
     <div>
-      <Hero/>
-      <Hero2/>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      {/* <h1 className="page-title">Random Meals</h1>
+      <Hero/>*/}
+      <Categories />
+      <Category type="dessert"/>
     </div>
   );
 }
 
 export default App;
+
+// How to display Category
+
+// How to pass a category selected as a prop
